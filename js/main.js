@@ -48,8 +48,8 @@ function doIt(data, publisher) {
   var height = +svg.attr('height');
 
   var sankey = d3.sankey()
-    .nodeWidth(15)
-    .nodePadding(10)
+    .nodeWidth(16)
+    .nodePadding(11)
     .size([width, height]);
 
   var path = sankey.link();
