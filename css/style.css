@@ -28,7 +28,7 @@ body {
 }
 
 .link:hover {
-  stroke-opacity: 0.3 !important;
+  stroke-opacity: 0.5 !important;
 }
 
 .PRH .link:hover {
@@ -68,6 +68,11 @@ body {
   position: relative;
   line-height: 32px;
   margin: 40px auto 0px auto;
+}
+
+p {
+  font-family: 'Old Standard TT', Times;
+  font-size: 13px;
 }
 
 .footer {

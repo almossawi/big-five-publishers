@@ -35,10 +35,11 @@
   {"name":"St. Martin's Paperbacks","org":"Macmillan","imprint":"St. Martin's Paperbacks"},
   {"name":"Thomas Dunne Books","org":"Macmillan","imprint":"St. Martin's Paperbacks"},
   {"name":"Forge","org":"Macmillan","imprint":"Tor/Forge"},
-  {"name":"Tor","org":"Macmillan","imprint":"Tor/Forge"},
+  {"name":"Orb","org":"Macmillan","imprint":"Tor/Forge"},
   {"name":"Macmillan Children's Publishing Group","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
-  {"name":"Tor Teen","org":"Macmillan","imprint":"Tor/Forge"},
-  {"name":"Starscape","org":"Macmillan","imprint":"Tor/Forge"}
+  {"name":"Starscape","org":"Macmillan","imprint":"Tor/Forge"},
+  {"name":"Tor","org":"Macmillan","imprint":"Tor/Forge"},
+  {"name":"Tor Teen","org":"Macmillan","imprint":"Tor/Forge"}
 ],
 "links":[
   {"source":5,"target":0,"value":6},
@@ -47,7 +48,7 @@
   {"source":8,"target":0,"value":1},
   {"source":9,"target":0,"value":1},
   {"source":10,"target":0,"value":3},
-  {"source":11,"target":0,"value":4},
+  {"source":11,"target":0,"value":5},
   {"source":12,"target":0,"value":1},
   {"source":14,"target":37,"value":1},
   {"source":15,"target":37,"value":1},
@@ -74,5 +75,6 @@
   {"source":36,"target":11,"value":1},
   {"source":37,"target":0,"value":10},
   {"source":38,"target":11,"value":1},
-  {"source":39,"target":11,"value":1}
+  {"source":39,"target":11,"value":1},
+  {"source":40,"target":11,"value":1}
 ]}
