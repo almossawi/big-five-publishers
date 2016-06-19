@@ -12,8 +12,8 @@
   {"name":"Vision","org":"Hachette","imprint":"Grand Central Publishing"},
   {"name":"Little, Brown and Company","org":"Hachette","imprint":"Little, Brown and Company"},
   {"name":"Back Bay Books","org":"Hachette","imprint":"Little, Brown and Company"},
+  {"name":"Jimmy Patterson","org":"Hachette","imprint":"Little, Brown and Company"},
   {"name":"Lee Boudreaux Books","org":"Hachette","imprint":"Little, Brown and Company"},
-  {"name":"Mulholland Books","org":"Hachette","imprint":"Little, Brown and Company"},
   {"name":"Little, Brown and Company Books for Young Readers","org":"Hachette","imprint":"Little, Brown and Company Books for Young Readers"},
   {"name":"LB Kids","org":"Hachette","imprint":"Little, Brown and Company Books for Young Readers"},
   {"name":"Poppy","org":"Hachette","imprint":"Little, Brown and Company Books for Young Readers"},
@@ -24,16 +24,19 @@
   {"name":"Orbit","org":"Hachette","imprint":"Orbit"},
   {"name":"Redhook","org":"Hachette","imprint":"Orbit"},
   {"name":"Yen Press","org":"Hachette","imprint":"Orbit"},
-  {"name":"Hachette Audio","org":"Hachette"},
-  {"name":"Hachette Books","org":"Hachette"}
+  {"name":"","org":""},
+  {"name":"Hachette Books","org":"Hachette"},
+  {"name":"Black Dog & Leventhal Publishers","org":"Hachette","imprint":"Hachette Books"},
+  {"name":"Goop Press","org":"Hachette","imprint":"Life & Style"},
+  {"name":"Mulholland Books","org":"Hachette","imprint":"Little, Brown and Company"},
+  {"name":"Hachette Audio","org":"Hachette"}
 ],
 "links":[
   {"source":5,"target":0,"value":5},
-  {"source":11,"target":0,"value":3},
+  {"source":11,"target":0,"value":4},
   {"source":15,"target":0,"value":2},
   {"source":18,"target":0,"value":3},
   {"source":22,"target":0,"value":2},
-  {"source":25,"target":0,"value":1},
   {"source":26,"target":0,"value":1},
   {"source":6,"target":5,"value":1},
   {"source":7,"target":5,"value":1},
@@ -49,5 +52,9 @@
   {"source":20,"target":18,"value":1},
   {"source":21,"target":18,"value":1},
   {"source":23,"target":22,"value":1},
-  {"source":24,"target":22,"value":1}
+  {"source":24,"target":22,"value":1},
+  {"source":27,"target":26,"value":1},
+  {"source":28,"target":8,"value":1},
+  {"source":29,"target":11,"value":1},
+  {"source":30,"target":0,"value":1}
 ]}
