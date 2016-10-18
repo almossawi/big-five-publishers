@@ -112,11 +112,12 @@ function doIt(data, publisher) {
     })
     .style('stroke', 'none')
     .on('mouseover', function(d) {
+      var this_one = d.imprint;
+
       d3.selectAll('.' + publisher + ' .link')
         .filter(function(d2) {
           var source_imprint = d2.source.imprint;
           var target_imprint = d2.target.imprint;
-          var this_one = d.imprint;
 
           return source_imprint === this_one || target_imprint === this_one;
         })
@@ -124,20 +125,11 @@ function doIt(data, publisher) {
         .style('stroke', function(d2) {
           return color[publisher];
         });
-        
-        /*d3.selectAll('.' + publisher + ' .node text')
-          .filter(function(d2) {
-            return d2.imprint !== d.imprint && d2.root !== '1';
-          })
-          .style('opacity', 0);*/
     })
     .on('mouseleave', function(d) {
       d3.selectAll('.' + publisher + ' .link')
         .style('stroke-opacity', 0.08)
         .style('stroke', '#000');
-        
-      /*d3.selectAll('.' + publisher + ' .node text')
-        .style('opacity', 1);*/
     })
     .append('title')
     .text(function(d) {
