@@ -67,11 +67,12 @@
   {"name":"HarperCollins Christian","org":"HarperCollins","imprint":"HarperCollins Christian"},
   {"name":"Zondervan","org":"HarperCollins","imprint":"HarperCollins Christian"},
   {"name":"Audio","org":"HarperCollins","imprint":"Audio"},
-    {"name":"Avon","org":"HarperCollins","imprint":"Avon"},
+  {"name":"Avon","org":"HarperCollins","imprint":"Avon"},
   {"name":"Avon Impulse","org":"HarperCollins","imprint":"Avon"},
   {"name":"Avon Inspire","org":"HarperCollins","imprint":"Avon"},
   {"name":"Avon Red","org":"HarperCollins","imprint":"Avon"},
-  {"name":"Park Row Books","org":"HarperCollins","imprint":"Harlequin"}
+  {"name":"Park Row Books","org":"HarperCollins","imprint":"Harlequin"},
+  {"name":"Graydon House ","org":"HarperCollins","imprint":"Harlequin"}
 ],
 "links":[
   {"source":5,"target":0,"value":1},
@@ -121,7 +122,7 @@
   {"source":52,"target":47,"value":1},
   {"source":54,"target":66,"value":1},
   {"source":55,"target":66,"value":1},
-  {"source":56,"target":0,"value":11},
+  {"source":56,"target":0,"value":12},
   {"source":57,"target":56,"value":1},
   {"source":58,"target":56,"value":1},
   {"source":59,"target":56,"value":1},
@@ -134,5 +135,6 @@
   {"source":62,"target":67,"value":1},
   {"source":67,"target":0,"value":2},
   {"source":35,"target":27,"value":1},
-  {"source":72,"target":56,"value":1}
+  {"source":72,"target":56,"value":1},
+  {"source":73,"target":56,"value":1}
 ]}
