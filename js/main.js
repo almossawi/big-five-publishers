@@ -49,7 +49,7 @@ function doIt(data, publisher) {
 
   var sankey = d3.sankey()
     .nodeWidth(16)
-    .nodePadding(11)
+    .nodePadding(10)
     .size([width, height]);
 
   var path = sankey.link();
@@ -112,14 +112,16 @@ function doIt(data, publisher) {
     })
     .style('stroke', 'none')
     .on('mouseover', function(d) {
-      var this_one = d.imprint;
+      var this_one = d.name;
+      var this_ones_child = (d.target) ? d.target : d.sourceLinks[0].target;
 
       d3.selectAll('.' + publisher + ' .link')
         .filter(function(d2) {
-          var source_imprint = d2.source.imprint;
-          var target_imprint = d2.target.imprint;
+          var source_imprint = d2.source.name;
+          var target_imprint = d2.target.name;
 
-          return source_imprint === this_one || target_imprint === this_one;
+          return source_imprint === this_one || target_imprint === this_one
+            || d2.source.name == this_ones_child.name;
         })
         .style('stroke-opacity', 0.5)
         .style('stroke', function(d2) {
