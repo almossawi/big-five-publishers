@@ -11,7 +11,7 @@ var color = {
   SS: '#cfab1c',
   Macmillan: '#c51039',
   HarperCollins: '#007cc4',
-  Hachette: '#000'
+  Hachette: '#777777'
 };
 
 // load data
@@ -113,7 +113,17 @@ function doIt(data, publisher) {
     .style('stroke', 'none')
     .on('mouseover', function(d) {
       var this_one = d.name;
-      var this_ones_child = (d.target) ? d.target : d.sourceLinks[0].target;
+      var this_ones_child = (d.sourceLinks.length == 0)
+        ? d
+        : (d.target)
+          ? d.target
+          : d.sourceLinks[0].target;
+
+      var that_ones_child = (this_ones_child.sourceLinks.length == 0)
+        ? this_ones_child
+        : (this_ones_child.target)
+          ? this_ones_child.target
+          : this_ones_child.sourceLinks[0].target;
 
       d3.selectAll('.' + publisher + ' .link')
         .filter(function(d2) {
@@ -121,7 +131,8 @@ function doIt(data, publisher) {
           var target_imprint = d2.target.name;
 
           return source_imprint === this_one || target_imprint === this_one
-            || d2.source.name == this_ones_child.name;
+            || d2.source.name == this_ones_child.name
+            || d2.source.name == that_ones_child.name;
         })
         .style('stroke-opacity', 0.5)
         .style('stroke', function(d2) {
