@@ -29,7 +29,18 @@
   {"name":"Black Dog & Leventhal Publishers","org":"Hachette","imprint":"Hachette Books"},
   {"name":"Goop Press","org":"Hachette","imprint":"Grand Central Life & Style"},
   {"name":"Mulholland Books","org":"Hachette","imprint":"Little, Brown and Company"},
-  {"name":"Hachette Audio","org":"Hachette"}
+  {"name":"Hachette Audio","org":"Hachette"},
+  {"name":"Perseus Books","org":"Hachette","imprint":"Perseus Books"},
+  {"name":"Avalon Travel","org":"Hachette","imprint":"Perseus Books"},
+  {"name":"Basic Books","org":"Hachette","imprint":"Perseus Books"},
+  {"name":"Basic Civitas","org":"Hachette","imprint":"Perseus Books"},
+  {"name":"Da Capo Press","org":"Hachette","imprint":"Perseus Books"},
+  {"name":"Da Capo Lifelong Books","org":"Hachette","imprint":"Perseus Books"},
+  {"name":"PublicAffairs","org":"Hachette","imprint":"Perseus Books"},
+  {"name":"Running Press","org":"Hachette","imprint":"Perseus Books"},
+  {"name":"Seal Press","org":"Hachette","imprint":"Perseus Books"},
+  {"name":"Westview Press","org":"Hachette","imprint":"Perseus Books"}
+  
 ],
 "links":[
   {"source":5,"target":0,"value":5},
@@ -56,5 +67,15 @@
   {"source":27,"target":26,"value":1},
   {"source":28,"target":8,"value":1},
   {"source":29,"target":11,"value":1},
-  {"source":30,"target":0,"value":1}
+  {"source":30,"target":0,"value":1},
+  {"source":31,"target":0,"value":9},
+  {"source":32,"target":31,"value":1},
+  {"source":33,"target":31,"value":1},
+  {"source":34,"target":31,"value":1},
+  {"source":35,"target":31,"value":1},
+  {"source":36,"target":31,"value":1},
+  {"source":37,"target":31,"value":1},
+  {"source":38,"target":31,"value":1},
+  {"source":39,"target":31,"value":1},
+  {"source":40,"target":31,"value":1}
 ]}
