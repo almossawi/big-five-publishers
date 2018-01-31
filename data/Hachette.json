@@ -39,8 +39,12 @@
   {"name":"PublicAffairs","org":"Hachette","imprint":"Perseus Books"},
   {"name":"Running Press","org":"Hachette","imprint":"Perseus Books"},
   {"name":"Seal Press","org":"Hachette","imprint":"Perseus Books"},
-  {"name":"Westview Press","org":"Hachette","imprint":"Perseus Books"}
-  
+  {"name":"Westview Press","org":"Hachette","imprint":"Perseus Books"},
+  {"name":"Disney-Hyperion","org":"Hachette","imprint":"Disney-Hyperion"},
+  {"name":"Hyperion Audio","org":"Hachette","imprint":"Disney-Hyperion"},
+  {"name":"Hyperion eBooks","org":"Hachette","imprint":"Disney-Hyperion"},
+  {"name":"Hyperion East","org":"Hachette","imprint":"Disney-Hyperion"},
+  {"name":"Voice","org":"Hachette","imprint":"Disney-Hyperion"}
 ],
 "links":[
   {"source":5,"target":0,"value":5},
@@ -76,5 +80,10 @@
   {"source":37,"target":31,"value":1},
   {"source":38,"target":31,"value":1},
   {"source":39,"target":31,"value":1},
-  {"source":40,"target":31,"value":1}
+  {"source":40,"target":31,"value":1},
+  {"source":41,"target":0,"value":4},
+  {"source":42,"target":41,"value":1},
+  {"source":43,"target":41,"value":1},
+  {"source":44,"target":41,"value":1},
+  {"source":45,"target":41,"value":1}
 ]}
