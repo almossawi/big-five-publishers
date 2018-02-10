@@ -41,13 +41,13 @@
   {"name":"G.P. Putnam's Sons for Young Readers","org":"PRH","imprint":"Penguin Young Readers Group"},
   {"name":"Grosset & Dunlap","org":"PRH","imprint":"Penguin Young Readers Group"},
   {"name":"Kathy Dawson Books","org":"PRH","imprint":"Penguin Young Readers Group"},
+  {"name":"Kokila","org":"PRH","imprint":"Penguin Young Readers Group"},
   {"name":"Nancy Paulsen Books","org":"PRH","imprint":"Penguin Young Readers Group"},
   {"name":"Philomel","org":"PRH","imprint":"Penguin Young Readers Group"},
   {"name":"Price Stern Sloan","org":"PRH","imprint":"Penguin Young Readers Group"},
   {"name":"Puffin Books","org":"PRH","imprint":"Penguin Young Readers Group"},
   {"name":"Razorbill","org":"PRH","imprint":"Penguin Young Readers Group"},
   {"name":"Speak","org":"PRH","imprint":"Penguin Young Readers Group"},
-  {"name":"Viking Children's Books","org":"PRH","imprint":"Penguin Young Readers Group"},
   {"name":"Alibi","org":"PRH","imprint":"Random House"},
   {"name":"Ballantine Books","org":"PRH","imprint":"Random House"},
   {"name":"Bantam","org":"PRH","imprint":"Random House"},
@@ -115,7 +115,8 @@
   {"name":"DK","org":"PRH","imprint":"DK"},
   {"name":"Audio / Travel / Living Language","org":"PRH","imprint":"Audio / Travel / Living Language"},
   {"name":"Make Me a World","org":"PRH","imprint":"Random House Children's Books"},
-  {"name":"Zinc Ink","org":"PRH","imprint":"Random House"}
+  {"name":"Zinc Ink","org":"PRH","imprint":"Random House"},
+  {"name":"Viking Children's Books","org":"PRH","imprint":"Penguin Young Readers Group"}
 ],
 "links":[
   {"source":5,"target":114,"value":1},
@@ -223,12 +224,13 @@
   {"source":108,"target":0,"value":20},
   {"source":109,"target":0,"value":16},
   {"source":110,"target":0,"value":16},
-  {"source":111,"target":0,"value":14},
+  {"source":111,"target":0,"value":15},
   {"source":112,"target":0,"value":18},
   {"source":113,"target":0,"value":3},
   {"source":114,"target":0,"value":9},
   {"source":115,"target":109,"value":1},
   {"source":4,"target":111,"value":1},
   {"source":116,"target":110,"value":1},
-  {"source":1,"target":108,"value":1}
+  {"source":1,"target":108,"value":1},
+  {"source":117,"target":111,"value":1}  
 ]}
