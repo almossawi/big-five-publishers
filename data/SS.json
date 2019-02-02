@@ -34,10 +34,11 @@
   {"name":"Simon & Schuster Audio Publishing","org":"SS","imprint":"Simon & Schuster Audio Publishing"},
   {"name":"Pimsleur","org":"SS","imprint":"Simon & Schuster Audio Publishing"},
   {"name":"Simon & Schuster Audio","org":"SS","imprint":"Simon & Schuster Audio Publishing"},
-  {"name":"Simon & Schuster Adult Publishing","org":"SS","imprint":"Simon & Schuster Adult Publishing"}
+  {"name":"Simon & Schuster Adult Publishing","org":"SS","imprint":"Simon & Schuster Adult Publishing"},
+  {"name":"Signal Press","org":"SS","imprint":"Atria"}
 ],
 "links":[
-  {"source":5,"target":35,"value":1},
+  {"source":5,"target":35,"value":2},
   {"source":6,"target":35,"value":1},
   {"source":7,"target":35,"value":1},
   {"source":8,"target":35,"value":1},
@@ -67,6 +68,7 @@
   {"source":32,"target":0,"value":2},
   {"source":33,"target":32,"value":1},
   {"source":34,"target":32,"value":1},
-  {"source":35,"target":0,"value":15},
-  {"source":4,"target":5,"value":1}
+  {"source":35,"target":0,"value":16},
+  {"source":4,"target":5,"value":1},
+  {"source":36,"target":5,"value":1}
 ]}
