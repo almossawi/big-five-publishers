@@ -116,7 +116,8 @@
   {"name":"Audio / Travel / Living Language","org":"PRH","imprint":"Audio / Travel / Living Language"},
   {"name":"Make Me a World","org":"PRH","imprint":"Random House Children's Books"},
   {"name":"Zinc Ink","org":"PRH","imprint":"Random House"},
-  {"name":"Viking Children's Books","org":"PRH","imprint":"Penguin Young Readers Group"}
+  {"name":"Viking Children's Books","org":"PRH","imprint":"Penguin Young Readers Group"},
+  {"name":"The World of Eric Carle","org":"PRH","imprint":"Penguin Young Readers Group"}
 ],
 "links":[
   {"source":5,"target":114,"value":1},
@@ -223,7 +224,7 @@
   {"source":107,"target":0,"value":9},
   {"source":109,"target":0,"value":16},
   {"source":110,"target":0,"value":36},
-  {"source":111,"target":0,"value":15},
+  {"source":111,"target":0,"value":16},
   {"source":112,"target":0,"value":18},
   {"source":113,"target":0,"value":3},
   {"source":114,"target":0,"value":9},
@@ -231,5 +232,6 @@
   {"source":4,"target":111,"value":1},
   {"source":116,"target":110,"value":1},
   {"source":1,"target":110,"value":1},
-  {"source":117,"target":111,"value":1}  
+  {"source":117,"target":111,"value":1},
+  {"source":118,"target":111,"value":1}
 ]}
