@@ -117,7 +117,7 @@
   {"name":"Make Me a World","org":"PRH","imprint":"Random House Children's Books"},
   {"name":"Zinc Ink","org":"PRH","imprint":"Random House"},
   {"name":"Viking Children's Books","org":"PRH","imprint":"Penguin Young Readers Group"},
-  {"name":"The World of Eric Carle","org":"PRH","imprint":"Penguin Young Readers Group"}
+  {"name":"World of Eric Carle","org":"PRH","imprint":"Penguin Young Readers Group"}
 ],
 "links":[
   {"source":5,"target":114,"value":1},
