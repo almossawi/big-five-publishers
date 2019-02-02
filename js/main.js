@@ -14,26 +14,30 @@ var color = {
   Hachette: '#777777'
 };
 
-// load data
-d3.json('data/PRH.json', function(data) {
-  doIt(data, 'PRH');
-});
+init();
 
-d3.json('data/Hachette.json', function(data) {
-  doIt(data, 'Hachette');
-});
+function init() {
+  // load data
+  d3.json('data/PRH.json', function(data) {
+    doIt(data, 'PRH');
+  });
 
-d3.json('data/HarperCollins.json', function(data) {
-  doIt(data, 'HarperCollins');
-});
+  d3.json('data/Hachette.json', function(data) {
+    doIt(data, 'Hachette');
+  });
 
-d3.json('data/Macmillan.json', function(data) {
-  doIt(data, 'Macmillan');
-});
+  d3.json('data/HarperCollins.json', function(data) {
+    doIt(data, 'HarperCollins');
+  });
 
-d3.json('data/SS.json', function(data) {
-  doIt(data, 'SS');
-});
+  d3.json('data/Macmillan.json', function(data) {
+    doIt(data, 'Macmillan');
+  });
+
+  d3.json('data/SS.json', function(data) {
+    doIt(data, 'SS');
+  });
+}
 
 function doIt(data, publisher) {
   var svg = d3.select('svg.' + publisher)
@@ -45,7 +49,10 @@ function doIt(data, publisher) {
     left: 1
   };
   var width = +svg.attr('width');
-  var height = +svg.attr('height');
+  var height = (+svg.attr('height') > 0)
+    ? +svg.attr('height')
+    : +svg.attr('default-height')
+
 
   var sankey = d3.sankey()
     .nodeWidth(16)

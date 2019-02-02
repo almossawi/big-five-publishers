@@ -44,6 +44,7 @@
   {"name":"Hyperion Audio","org":"Hachette","imprint":"Disney-Hyperion"},
   {"name":"Hyperion eBooks","org":"Hachette","imprint":"Disney-Hyperion"},
   {"name":"Hyperion East","org":"Hachette","imprint":"Disney-Hyperion"},
+  {"name":"Rick Riordan Presents","org":"Hachette","imprint":"Disney-Hyperion"},
   {"name":"Voice","org":"Hachette","imprint":"Disney-Hyperion"}
 ],
 "links":[
@@ -81,9 +82,10 @@
   {"source":38,"target":31,"value":1},
   {"source":39,"target":31,"value":1},
   {"source":40,"target":31,"value":1},
-  {"source":41,"target":0,"value":4},
+  {"source":41,"target":0,"value":5},
   {"source":42,"target":41,"value":1},
   {"source":43,"target":41,"value":1},
   {"source":44,"target":41,"value":1},
-  {"source":45,"target":41,"value":1}
+  {"source":45,"target":41,"value":1},
+  {"source":46,"target":41,"value":1}
 ]}
