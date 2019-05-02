@@ -36,7 +36,8 @@
   {"name":"Simon & Schuster Audio","org":"SS","imprint":"Simon & Schuster Audio Publishing"},
   {"name":"Simon & Schuster Adult Publishing","org":"SS","imprint":"Simon & Schuster Adult Publishing"},
   {"name":"Signal Press","org":"SS","imprint":"Atria"},
-  {"name":"Avid Reader Press","org":"SS","imprint":"Simon & Schuster Adult Publishing"}
+  {"name":"Avid Reader Press","org":"SS","imprint":"Simon & Schuster Adult Publishing"},
+  {"name":"Tiller Press","org":"SS","imprint":"Simon & Schuster Adult Publishing"}
 ],
 "links":[
   {"source":5,"target":35,"value":2},
@@ -69,8 +70,9 @@
   {"source":32,"target":0,"value":2},
   {"source":33,"target":32,"value":1},
   {"source":34,"target":32,"value":1},
-  {"source":35,"target":0,"value":17},
+  {"source":35,"target":0,"value":18},
   {"source":4,"target":5,"value":1},
   {"source":36,"target":5,"value":1},
-  {"source":37,"target":35,"value":1}
+  {"source":37,"target":35,"value":1},
+  {"source":38,"target":35,"value":1}
 ]}
