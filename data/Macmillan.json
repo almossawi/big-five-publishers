@@ -22,7 +22,7 @@
   {"name":"Roaring Brook Press","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
   {"name":"Square Fish","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
   {"name":"MCD Books","org":"Macmillan","imprint":"Farrar, Straus and Giroux"},
-  {"name":"Faber and Faber","org":"Macmillan","imprint":"Farrar, Straus and Giroux"},
+  {"name":"","org":"","imprint":""},
   {"name":"FSG Originals","org":"Macmillan","imprint":"Farrar, Straus and Giroux"},
   {"name":"Hill and Wang","org":"Macmillan","imprint":"Farrar, Straus and Giroux"},
   {"name":"Holt Paperbacks","org":"Macmillan","imprint":"Henry Holt"},
@@ -45,7 +45,7 @@
   {"name":"Tor Labs","org":"Macmillan","imprint":"Tor"}
 ],
 "links":[
-  {"source":5,"target":0,"value":6},
+  {"source":5,"target":0,"value":5},
   {"source":6,"target":37,"value":1},
   {"source":7,"target":0,"value":3},
   {"source":8,"target":0,"value":1},
@@ -63,7 +63,6 @@
   {"source":20,"target":37,"value":1},
   {"source":21,"target":37,"value":1},
   {"source":22,"target":5,"value":1},
-  {"source":23,"target":5,"value":1},
   {"source":24,"target":5,"value":1},
   {"source":25,"target":5,"value":1},
   {"source":26,"target":7,"value":1},
