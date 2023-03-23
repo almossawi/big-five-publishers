@@ -46,7 +46,14 @@
   {"name":"Hyperion eBooks","org":"Hachette","imprint":"Disney-Hyperion"},
   {"name":"Hyperion East","org":"Hachette","imprint":"Disney-Hyperion"},
   {"name":"Rick Riordan Presents","org":"Hachette","imprint":"Disney-Hyperion"},
-  {"name":"Voice","org":"Hachette","imprint":"Disney-Hyperion"}
+  {"name":"Voice","org":"Hachette","imprint":"Disney-Hyperion"},
+  {"name":"Workman Publishing","org":"Hachette","imprint":"Workman Publishing"},
+  {"name":"Workman","org":"Hachette","imprint":"Workman Publishing"},
+  {"name":"Algonquin","org":"Hachette","imprint":"Workman Publishing"},
+  {"name":"Algonquin Young Readers","org":"Hachette","imprint":"Workman Publishing"},
+  {"name":"Artisan","org":"Hachette","imprint":"Workman Publishing"},
+  {"name":"Storey Publishing","org":"Hachette","imprint":"Workman Publishing"},
+  {"name":"Timber Press","org":"Hachette","imprint":"Workman Publishing"}
 ],
 "links":[
   {"source":5,"target":0,"value":5},
@@ -88,5 +95,12 @@
   {"source":44,"target":42,"value":1},
   {"source":45,"target":42,"value":1},
   {"source":46,"target":42,"value":1},
-  {"source":47,"target":42,"value":1}
+  {"source":47,"target":42,"value":1},
+  {"source":48,"target":0,"value":6},
+  {"source":49,"target":48,"value":1},
+  {"source":50,"target":48,"value":1},
+  {"source":51,"target":48,"value":1},
+  {"source":52,"target":48,"value":1},
+  {"source":53,"target":48,"value":1},
+  {"source":54,"target":48,"value":1}
 ]}

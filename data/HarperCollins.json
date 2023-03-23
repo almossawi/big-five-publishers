@@ -75,7 +75,8 @@
   {"name":"Graydon House","org":"HarperCollins","imprint":"Harlequin"},
   {"name":"Clarion","org":"HarperCollins","imprint":"HarperCollins Children's Books"},
   {"name":"Versify","org":"HarperCollins","imprint":"HarperCollins Children's Books"},
-  {"name":"Mariner / Custom House","org":"HarperCollins","imprint":"William Morrow"}
+  {"name":"Mariner / Custom House","org":"HarperCollins","imprint":"William Morrow"},
+  {"name":"HarperAlley","org":"HarperCollins","imprint":"HarperCollins Children's Books"}
 ],
 "links":[
   {"source":7,"target":15,"value":1},
@@ -104,7 +105,7 @@
   {"source":27,"target":0,"value":9},
   {"source":28,"target":27,"value":1},
   {"source":29,"target":27,"value":1},
-  {"source":30,"target":0,"value":11},
+  {"source":30,"target":0,"value":12},
   {"source":31,"target":30,"value":1},
   {"source":32,"target":30,"value":1},
   {"source":33,"target":30,"value":1},
@@ -142,5 +143,6 @@
   {"source":35,"target":26,"value":1},
   {"source":74,"target":30,"value":1},
   {"source":75,"target":30,"value":1},
-  {"source":76,"target":27,"value":1}
+  {"source":76,"target":27,"value":1},
+  {"source":77,"target":30,"value":1}
 ]}
