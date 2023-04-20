@@ -91,6 +91,11 @@ a, a:active, a:link, a:visited {
   text-decoration: underline;
 }
 
+.substack-copy {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
 @media only screen and (max-width: 900px) {
   .header {
     font-size: 30px;

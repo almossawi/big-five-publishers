@@ -1,12 +1,12 @@
 {"nodes":[
   {"name":"HarperCollins","org":"HarperCollins"},
-  {"name":"Anthony Bourdain","org":"HarperCollins","imprint":"Ecco Books"},
+  {"name":"","org":"","imprint":""},
   {"name":"Avon","org":"HarperCollins","imprint":"William Morrow"},
   {"name":"Avon Impulse","org":"HarperCollins","imprint":"Avon"},
   {"name":"Avon Inspire","org":"HarperCollins","imprint":"Avon"},
   {"name":"Avon Red","org":"HarperCollins","imprint":"Avon"},
   {"name":"Amistad","org":"HarperCollins","imprint":"Harper"},
-  {"name":"Ecco Books","org":"HarperCollins","imprint":"Harper"},
+  {"name":"Ecco","org":"HarperCollins","imprint":"Harper"},
   {"name":"","org":""},
   {"name":"Harper Voyager","org":"HarperCollins","imprint":"William Morrow"},
   {"name":"Morrow Cookbooks","org":"HarperCollins","imprint":"William Morrow"},
@@ -80,7 +80,6 @@
 ],
 "links":[
   {"source":7,"target":15,"value":1},
-  {"source":1,"target":7,"value":1},
   {"source":2,"target":27,"value":3},
   {"source":3,"target":2,"value":1},
   {"source":4,"target":2,"value":1},
