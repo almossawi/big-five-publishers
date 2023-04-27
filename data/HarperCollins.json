@@ -76,7 +76,8 @@
   {"name":"Clarion","org":"HarperCollins","imprint":"HarperCollins Children's Books"},
   {"name":"Versify","org":"HarperCollins","imprint":"HarperCollins Children's Books"},
   {"name":"Mariner / Custom House","org":"HarperCollins","imprint":"William Morrow"},
-  {"name":"HarperAlley","org":"HarperCollins","imprint":"HarperCollins Children's Books"}
+  {"name":"HarperAlley","org":"HarperCollins","imprint":"HarperCollins Children's Books"},
+  {"name":"Quill Tree","org":"HarperCollins","imprint":"HarperCollins Children's Books"}
 ],
 "links":[
   {"source":7,"target":15,"value":1},
@@ -104,7 +105,7 @@
   {"source":27,"target":0,"value":9},
   {"source":28,"target":27,"value":1},
   {"source":29,"target":27,"value":1},
-  {"source":30,"target":0,"value":12},
+  {"source":30,"target":0,"value":13},
   {"source":31,"target":30,"value":1},
   {"source":32,"target":30,"value":1},
   {"source":33,"target":30,"value":1},
@@ -114,6 +115,7 @@
   {"source":38,"target":30,"value":1},
   {"source":39,"target":30,"value":1},
   {"source":40,"target":30,"value":1},
+  {"source":78,"target":30,"value":1},
   {"source":41,"target":26,"value":1},
   {"source":42,"target":30,"value":1},
   {"source":44,"target":47,"value":1},
