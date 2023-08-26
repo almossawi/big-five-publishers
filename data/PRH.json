@@ -108,7 +108,7 @@
   {"name":"Vintage Espanol","org":"PRH","imprint":"The Knopf Doubleday Publishing Group"},
   {"name":"The Knopf Doubleday Publishing Group","org":"PRH","imprint":"The Knopf Doubleday Publishing Group"},
   {"name":"","org":""},
-  {"name":"Random House Children’s Books","org":"PRH","imprint":"Random House Children’s Books"},
+  {"name":"Random House Children's Books","org":"PRH","imprint":"Random House Children’s Books"},
   {"name":"Random House","org":"PRH","imprint":"Random House"},
   {"name":"Penguin Young Readers Group","org":"PRH","imprint":"Penguin Young Readers Group"},
   {"name":"Penguin Publishing Group","org":"PRH","imprint":"Penguin Publishing Group"},
@@ -117,7 +117,9 @@
   {"name":"Make Me a World","org":"PRH","imprint":"Random House Children's Books"},
   {"name":"Zinc Ink","org":"PRH","imprint":"Random House"},
   {"name":"Viking Children's Books","org":"PRH","imprint":"Penguin Young Readers Group"},
-  {"name":"World of Eric Carle","org":"PRH","imprint":"Penguin Young Readers Group"}
+  {"name":"World of Eric Carle","org":"PRH","imprint":"Penguin Young Readers Group"},
+  {"name":"Anne Schwartz Books","org":"PRH","imprint":"Random House Children's Books"},
+  {"name":"Random House Studio","org":"PRH","imprint":"Random House Children's Books"}
 ],
 "links":[
   {"source":5,"target":114,"value":1},
@@ -219,7 +221,7 @@
   {"source":105,"target":107,"value":1},
   {"source":106,"target":107,"value":1},
   {"source":107,"target":0,"value":9},
-  {"source":109,"target":0,"value":15},
+  {"source":109,"target":0,"value":17},
   {"source":110,"target":0,"value":34},
   {"source":111,"target":0,"value":16},
   {"source":112,"target":0,"value":18},
@@ -230,5 +232,7 @@
   {"source":116,"target":110,"value":1},
   {"source":1,"target":110,"value":1},
   {"source":117,"target":111,"value":1},
-  {"source":118,"target":111,"value":1}
+  {"source":118,"target":111,"value":1},
+  {"source":119,"target":109,"value":1},
+  {"source":120,"target":109,"value":1}
 ]}
