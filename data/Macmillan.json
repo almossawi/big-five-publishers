@@ -5,7 +5,7 @@
   {"name":"Macmillan Audio","org":"Macmillan","imprint":"Macmillan Audio"},
   {"name":"Celadon Books","org":"Macmillan","imprint":"Celadon Books"},
   {"name":"Farrar, Straus and Giroux","org":"Macmillan","imprint":"Farrar, Straus and Giroux"},
-  {"name":"Farrar, Straus and Giroux (BYR)","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
+  {"name":"Balzer & Bray","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
   {"name":"Henry Holt & Co.","org":"Macmillan","imprint":"Henry Holt & Co."},
   {"name":"Flatiron Books","org":"Macmillan","imprint":"Flatiron Books"},
   {"name":"Macmillan Young Listeners","org":"Macmillan","imprint":"Macmillan Audio"},
@@ -13,6 +13,7 @@
   {"name":"Tor Publishing Group","org":"Macmillan","imprint":"Tor Publishing Group"},
   {"name":"","org":""},
   {"name":"","org":"Macmillan"},
+  {"name":"Farrar, Straus and Giroux (BYR)","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
   {"name":"Feiwel & Friends","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
   {"name":"First Second","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
   {"name":"Henry Holt & Co. (BYR)","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
@@ -20,9 +21,8 @@
   {"name":"Neon Squid","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
   {"name":"Odd Dot","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
   {"name":"Priddy Books","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
-  {"name":"Roaring Brook Press","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
   {"name":"Farrar, Straus and Giroux","org":"Macmillan","imprint":"Farrar, Straus and Giroux"},
-  {"name":"Square Fish","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
+  {"name":"Roaring Brook Press","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"},
   {"name":"FSG Originals","org":"Macmillan","imprint":"Farrar, Straus and Giroux"},
   {"name":"MCD","org":"Macmillan","imprint":"Farrar, Straus and Giroux"},
   {"name":"Andy Cohen Books","org":"Macmillan","imprint":"Henry Holt & Co."},
@@ -48,7 +48,8 @@
   {"name":"Metropolitan Books","org":"Macmillan","imprint":"Henry Holt & Co."},
   {"name":"An Oprah Book","org":"Macmillan","imprint":"Flatiron Books"},
   {"name":"Flatiron Books","org":"Macmillan","imprint":"Flatiron Books"},
-  {"name":"Moment of Lift Books","org":"Macmillan","imprint":"Flatiron Books"}
+  {"name":"Moment of Lift Books","org":"Macmillan","imprint":"Flatiron Books"},
+  {"name":"Square Fish","org":"Macmillan","imprint":"Macmillan Children's Publishing Group"}
 ],
 "links":[
   {"source":5,"target":0,"value":5},
@@ -80,7 +81,7 @@
   {"source":34,"target":10,"value":1},
   {"source":35,"target":11,"value":1},
   {"source":36,"target":11,"value":1},
-  {"source":37,"target":0,"value":10},
+  {"source":37,"target":0,"value":11},
   {"source":38,"target":11,"value":1},
   {"source":39,"target":11,"value":1},
   {"source":40,"target":11,"value":1},
@@ -96,5 +97,6 @@
   {"source":49,"target":8,"value":1},
   {"source":4,"target":1,"value":1},
   {"source":1,"target":0,"value":1},
-  {"source":23,"target":37,"value":1}
+  {"source":23,"target":37,"value":1},
+  {"source":50,"target":37,"value":1}
 ]}
