@@ -21,7 +21,7 @@
   {"name":"Berkley","org":"PRH","imprint":"Penguin Publishing Group"},
   {"name":"Blue Rider Press","org":"PRH","imprint":"Penguin Publishing Group"},
   {"name":"Current","org":"PRH","imprint":"Penguin Publishing Group"},
-  {"name":"DAW","org":"PRH","imprint":"Penguin Publishing Group"},
+  {"name":"","org":"","imprint":""},
   {"name":"Dutton","org":"PRH","imprint":"Penguin Publishing Group"},
   {"name":"G.P. Putnam's Sons","org":"PRH","imprint":"Penguin Publishing Group"},
   {"name":"Pamela Dorman Books","org":"PRH","imprint":"Penguin Publishing Group"},
@@ -122,7 +122,10 @@
   {"name":"Sylvan Learning","org":"PRH","imprint":"Random House Children's Books"},
   {"name":"The Princeton Review","org":"PRH","imprint":"Delacorte Press"},
   {"name":"Wendy Lamb Books","org":"PRH","imprint":"Delacorte Press"},
-  {"name":"Yearling Books","org":"PRH","imprint":"Delacorte Press"}
+  {"name":"Yearling Books","org":"PRH","imprint":"Delacorte Press"},
+  {"name":"Random House Worlds","org":"PRH","imprint":"Random House"},
+  {"name":"Inklore","org":"PRH","imprint":"Random House"},
+  {"name":"Boom! Studios","org":"PRH","imprint":"Random House"}
 ],
 "links":[
   {"source":5,"target":114,"value":1},
@@ -141,7 +144,6 @@
   {"source":19,"target":112,"value":1},
   {"source":20,"target":112,"value":1},
   {"source":21,"target":112,"value":1},
-  {"source":22,"target":112,"value":1},
   {"source":23,"target":112,"value":1},
   {"source":24,"target":112,"value":1},
   {"source":25,"target":112,"value":1},
@@ -224,9 +226,9 @@
   {"source":106,"target":107,"value":1},
   {"source":107,"target":0,"value":9},
   {"source":109,"target":0,"value":20},
-  {"source":110,"target":0,"value":34},
+  {"source":110,"target":0,"value":37},
   {"source":111,"target":0,"value":15},
-  {"source":112,"target":0,"value":18},
+  {"source":112,"target":0,"value":17},
   {"source":113,"target":0,"value":3},
   {"source":114,"target":0,"value":9},
   {"source":115,"target":109,"value":1},
@@ -239,5 +241,9 @@
   {"source":120,"target":109,"value":1},
   {"source":121,"target":109,"value":1},
   {"source":122,"target":109,"value":1},
-  {"source":123,"target":109,"value":1}
+  {"source":123,"target":109,"value":1},
+  {"source":124,"target":110,"value":1},
+  {"source":125,"target":110,"value":1},
+  {"source":126,"target":110,"value":1}
+  
 ]}
