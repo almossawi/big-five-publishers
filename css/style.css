@@ -86,6 +86,11 @@ p {
   margin: 20px auto;
 }
 
+.footer-banner {
+  max-width: 460px;
+  width: 100%;
+}
+
 a, a:active, a:link, a:visited {
   color: #3b3b3b;
   text-decoration: underline;
