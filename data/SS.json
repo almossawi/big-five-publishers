@@ -30,14 +30,15 @@
   {"name":"Saga Press","org":"SS","imprint":"Simon & Schuster Children's Publishing"},
   {"name":"Salaam Reads","org":"SS","imprint":"Simon & Schuster Children's Publishing"},
   {"name":"","org":"","imprint":""},
-  {"name":"Simon Spotlight","org":"SS","imprint":"Simon & Schuster Children's Publishing"},
+  {"name":"Simon Pulse","org":"SS","imprint":"Simon & Schuster Children's Publishing"},
   {"name":"Simon & Schuster Audio Publishing","org":"SS","imprint":"Simon & Schuster Audio Publishing"},
   {"name":"Pimsleur","org":"SS","imprint":"Simon & Schuster Audio Publishing"},
   {"name":"Simon & Schuster Audio","org":"SS","imprint":"Simon & Schuster Audio Publishing"},
   {"name":"Simon & Schuster Adult Publishing","org":"SS","imprint":"Simon & Schuster Adult Publishing"},
   {"name":"Signal Press","org":"SS","imprint":"Atria"},
   {"name":"Avid Reader Press","org":"SS","imprint":"Simon & Schuster Adult Publishing"},
-  {"name":"Tiller Press","org":"SS","imprint":"Simon & Schuster Adult Publishing"}
+  {"name":"Tiller Press","org":"SS","imprint":"Simon & Schuster Adult Publishing"},
+  {"name":"Simon Spotlight","org":"SS","imprint":"Simon & Schuster Children's Publishing"}
 ],
 "links":[
   {"source":5,"target":35,"value":2},
@@ -55,7 +56,7 @@
   {"source":17,"target":35,"value":1},
   {"source":18,"target":35,"value":1},
   {"source":19,"target":35,"value":1},
-  {"source":20,"target":0,"value":9},
+  {"source":20,"target":0,"value":10},
   {"source":21,"target":20,"value":1},
   {"source":22,"target":20,"value":1},
   {"source":23,"target":20,"value":1},
@@ -73,5 +74,6 @@
   {"source":4,"target":5,"value":1},
   {"source":36,"target":5,"value":1},
   {"source":37,"target":35,"value":1},
-  {"source":38,"target":35,"value":1}
+  {"source":38,"target":35,"value":1},
+  {"source":39,"target":20,"value":1}
 ]}
