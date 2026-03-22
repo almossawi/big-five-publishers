@@ -10,11 +10,16 @@ body {
   /*shape-rendering: crispEdges;*/
 }
 
+/* index.html: .index-page .node text is 1px smaller than timeline */
+.index-page .node text {
+  font-size: 11px;
+}
+
 .node text {
   pointer-events: none;
   text-shadow: 0 1px 0 #fff;
   font-family: 'Fira Sans', Arial;
-  font-size: 11px;
+  font-size: 14px;
   text-shadow: -1px -1px 0px #fff,
     1px -1px 0px #fff,
     -1px 1px 0px #fff,
@@ -60,6 +65,38 @@ body {
   clear: both;
 }
 
+.index-timeline-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.index-timeline-beta {
+  font-family: 'Fira Sans', Arial;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #999;
+  text-transform: uppercase;
+}
+
+/* Same centered column as timeline .timeline-topbar-actions — pill top-right of 1000px container */
+.index-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  min-height: 0;
+  padding: 2px 10px 8px;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+}
+
 .header {
   max-width: 1000px;
   width: 100%;
@@ -68,7 +105,34 @@ body {
   position: relative;
   line-height: 32px;
   letter-spacing: -2px;
-  margin: 40px auto 0px auto;
+  margin: 20px auto 0px auto;
+}
+
+.index-timeline-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fira Sans', Arial;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  padding: 5px 12px;
+  border: 1px solid #c55a0a;
+  border-radius: 9999px;
+  background: #ff8433;
+  box-shadow: none;
+  color: #fff !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transform: scale(1);
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.2s ease;
+}
+
+.index-timeline-link:hover {
+  color: #fff !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(197, 90, 10, 0.35);
+  transform: scale(1.06);
 }
 
 p {
@@ -76,19 +140,41 @@ p {
   font-size: 13px;
 }
 
+/* Match index (Bootstrap body): line-height, color, opacity; +1px vs prior 13px */
 .footer {
   font-family: 'Old Standard TT', Times;
-  font-size: 13px;
+  font-size: 14px;
   font-style: italic;
+  line-height: 1.42857;
+  color: #333;
+  opacity: 1;
   max-width: 1000px;
   width: 100%;
   position: relative;
   margin: 20px auto;
 }
 
+.footer p {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #333;
+  opacity: 1;
+}
+
 .footer-banner {
   max-width: 460px;
   width: 100%;
+}
+
+/* Shared footer injected via footer.html + js/load-footer.js */
+#site-footer {
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.42857;
+  color: #333;
+  opacity: 1;
 }
 
 a, a:active, a:link, a:visited {
@@ -98,11 +184,23 @@ a, a:active, a:link, a:visited {
 
 .substack-copy {
   margin-top: 5px;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.42857;
+  color: #333;
+  opacity: 1;
 }
 
 @media only screen and (max-width: 900px) {
   .header {
     font-size: 30px;
+  }
+
+  .index-top-bar {
+    padding: 8px 10px 6px;
+  }
+
+  .index-timeline-link {
+    font-size: 11px;
+    padding: 4px 10px;
   }
 }

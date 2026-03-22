@@ -1,0 +1,731 @@
+.timeline-body {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  background-color: #f8f8f8;
+  font-family: 'Fira Sans', Arial;
+  --drawer-width: 520px;
+  /* Panel closed: like index.html — scroll, sankey max 1000px, natural height */
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* With pane open: same height behavior as closed — page scrolls, sankey is not forced to viewport height */
+.timeline-body.controls-open {
+  min-height: 0;
+}
+
+.timeline-shell {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+}
+
+/* Avoid stretching the main column to the viewport when content is shorter — removes the gray gap below the sankey */
+.timeline-body:not(.controls-open) {
+  min-height: 0;
+}
+
+.timeline-body:not(.controls-open) .timeline-shell {
+  flex: 0 0 auto;
+  align-items: flex-start;
+  min-height: 0;
+}
+
+.timeline-body.controls-open .timeline-shell {
+  flex: 0 0 auto;
+  align-items: flex-start;
+  min-height: 0;
+}
+
+.main-column {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  box-sizing: border-box;
+  padding-right: 0;
+  transition: padding-right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-body:not(.controls-open) .main-column {
+  flex: 1 1 auto;
+  min-height: auto;
+}
+
+.timeline-body.controls-open .main-column {
+  padding-right: var(--drawer-width);
+  flex: 1 1 auto;
+  min-height: auto;
+}
+
+/*
+ * Title uses .header from style.css, which sets line-height: 32px with font-size: 50px
+ * and height: 80px — that clips ascenders/descenders and wrapped lines. Override here.
+ */
+.timeline-body .header.timeline-page-header {
+  flex-shrink: 0;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  line-height: 1.12;
+  margin-top: 20px;
+  padding: 0.2em 0 0.3em;
+  box-sizing: border-box;
+  max-height: none;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    max-height 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    margin-top 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    margin-bottom 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s;
+}
+
+.timeline-body.controls-open .header.timeline-page-header {
+  opacity: 0;
+  transform: translateY(-32px);
+  max-height: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    max-height 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    margin-top 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    margin-bottom 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 0.32s;
+}
+
+.timeline-topbar-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 4px;
+}
+
+.timeline-classic-link,
+.timeline-classic-link:link,
+.timeline-classic-link:visited,
+.timeline-classic-link:active {
+  font-family: 'Fira Sans', Arial;
+  font-size: 12px;
+  color: #999;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.timeline-classic-link:hover {
+  color: #333;
+}
+
+.timeline-body.controls-open .timeline-classic-link {
+  display: none;
+}
+
+/* Footer: centered when closed; full width minus drawer + 20px left gutter when open */
+.timeline-body #site-footer {
+  margin-top: 50px;
+  box-sizing: border-box;
+  transition:
+    margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    margin-right 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-body:not(.controls-open) #site-footer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.timeline-body.controls-open #site-footer {
+  margin-left: 20px;
+  margin-right: 0;
+  width: calc(100% - var(--drawer-width) - 20px);
+  max-width: none;
+}
+
+/* Visual style matches index.html “Explore historic data” (.index-timeline-link in style.css) */
+.controls-expand-btn.index-timeline-link {
+  position: static;
+  cursor: pointer;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.timeline-body.controls-open .controls-expand-btn {
+  display: none;
+}
+
+.controls {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+  width: var(--drawer-width);
+  min-width: var(--drawer-width);
+  max-width: var(--drawer-width);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: rgba(248, 248, 248, 0.98);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-left: 1px solid #e0e0e0;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.06);
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.timeline-body.controls-open .controls {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.controls-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.controls-panel-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 8px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.controls-panel-title {
+  font-family: 'Fira Sans', Arial;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.controls-collapse-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  color: #999;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 0.85;
+}
+
+.controls-collapse-btn:hover {
+  color: #333;
+}
+
+.controls-inner {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px 14px 16px;
+}
+
+.controls-panel-slot {
+  min-height: 0;
+  margin-top: 12px;
+}
+
+/* Publisher tabs under main title when drawer is closed (tabs are moved in JS) */
+.pub-tabs-main-slot {
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 1000px;
+  margin: 8px auto 12px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.timeline-body.controls-open .pub-tabs-main-slot {
+  display: none;
+}
+
+.pub-tabs-panel-slot {
+  flex-shrink: 0;
+}
+
+.pub-tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.pub-tab {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 5px 4px;
+  font-family: 'Fira Sans', Arial;
+  font-size: 13px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.pub-tab:hover {
+  color: #333;
+}
+
+.pub-tab.active {
+  color: #333;
+  font-weight: 500;
+}
+
+.pub-tab.active[data-pub='PRH'] { border-bottom-color: #ff8433; }
+.pub-tab.active[data-pub='HarperCollins'] { border-bottom-color: #007cc4; }
+.pub-tab.active[data-pub='Macmillan'] { border-bottom-color: #c51039; }
+.pub-tab.active[data-pub='SS'] { border-bottom-color: #cfab1c; }
+.pub-tab.active[data-pub='Hachette'] { border-bottom-color: #777777; }
+
+.slider-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 100%;
+}
+
+.slider-year-label {
+  font-family: 'Fira Sans', Arial;
+  font-size: 11px;
+  color: #999;
+  flex-shrink: 0;
+  margin-top: 60px;
+  line-height: 12px;
+  min-width: 2.2em;
+}
+
+.slider-year-label#year-range-start {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.slider-year-label#year-range-end {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.play-btn {
+  background: none;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: black;
+  padding: 0;
+  padding-left: 2px;
+  margin-top: 50px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.play-btn:hover {
+  background: black;
+  color: #fff;
+}
+
+.slider-wrap {
+  flex: 1;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 44px;
+  cursor: pointer;
+}
+
+.change-bars {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 96px;
+  top: 66px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cbar {
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.cbar-up {
+  bottom: calc(50% + 3.5px);
+  background: #00a832;
+  opacity: 0.8;
+  border-radius: 3px 3px 0 0;
+}
+
+.cbar-down {
+  top: calc(50% + 3.5px);
+  background: #e01040;
+  opacity: 0.8;
+  border-radius: 0 0 3px 3px;
+}
+
+.date-display {
+  font-family: 'Fira Sans', Arial;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  min-width: 130px;
+  text-align: left;
+  margin-top: 56px;
+  margin-left: 20px;
+}
+
+/* width extension = 2 * TRACK_SIDE in js/timeline.js */
+.custom-track {
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  margin-top: 3px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 3px 4px -2px rgba(0,0,0,0.05), 0 -3px 4px -2px rgba(0,0,0,0.05);
+  z-index: 2;
+}
+
+.custom-thumb {
+  position: absolute;
+  width: 21px;
+  height: 5px;
+  border-radius: 12px;
+  background: black;
+  cursor: pointer;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease, border-radius 0.2s ease;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+/* Hover anywhere in the slider column (track, thumb, padding, bars area) */
+.slider-wrap:hover .custom-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.changes {
+  margin-top: 4px;
+  font-family: 'Fira Sans', Arial;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.change-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.change-row:last-child {
+  margin-bottom: 0;
+}
+
+.change-label {
+  flex-shrink: 0;
+  min-width: 80px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.change-names {
+  color: #666;
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
+}
+
+.change-added {
+  color: #00a832;
+  font-weight: 500;
+}
+
+.change-removed {
+  color: #e01040;
+  font-weight: 500;
+}
+
+.change-moved {
+  color: #0066cc;
+  font-weight: 500;
+}
+
+.change-pub {
+  color: #999;
+  font-size: 11px;
+}
+
+.no-changes {
+  color: #999;
+}
+
+/* Imprint search (below snapshot changes) */
+.imprint-search-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e8e8e8;
+  font-family: 'Fira Sans', Arial;
+}
+
+.imprint-search-heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 6px;
+}
+
+/* Match .controls-keyboard-hint */
+.imprint-search-label {
+  display: block;
+  margin: 0 0 8px;
+  padding: 0;
+  font-family: 'Fira Sans', Arial;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #999;
+}
+
+.imprint-search-input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  font-family: 'Fira Sans', Arial;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  margin-bottom: 12px;
+}
+
+.imprint-search-input:focus {
+  outline: none;
+  border-color: #888;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+}
+
+.imprint-search-results {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+/* Match .imprint-search-label */
+.imprint-search-empty {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', Arial;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #999;
+}
+
+.imprint-search-group {
+  margin-bottom: 16px;
+}
+
+.imprint-search-group:last-child {
+  margin-bottom: 0;
+}
+
+.imprint-search-group-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.imprint-search-group-title .imprint-search-pub {
+  font-weight: 500;
+  color: #999;
+  font-size: 11px;
+  margin-left: 6px;
+}
+
+.imprint-search-detail {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.imprint-search-detail td {
+  padding: 4px 8px 4px 0;
+  vertical-align: top;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.imprint-search-detail tr:last-child td {
+  border-bottom: none;
+}
+
+.imprint-search-detail .is-kind {
+  width: 5.5em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.imprint-search-detail .is-kind.is-added {
+  color: #00a832;
+}
+
+.imprint-search-detail .is-kind.is-removed {
+  color: #e01040;
+}
+
+.imprint-search-detail .is-kind.is-moved {
+  color: #0066cc;
+}
+
+.imprint-search-detail .is-detail {
+  color: #555;
+}
+
+.controls-keyboard-hint {
+  margin: 10px 0 30px;
+  padding: 0;
+  font-family: 'Fira Sans', Arial;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #999;
+}
+
+.sankey-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px 10px;
+  flex: 0 0 auto;
+  min-height: auto;
+  overflow: visible;
+}
+
+.timeline-body.controls-open .sankey-container {
+  max-width: none;
+  align-self: stretch;
+}
+
+/* Natural height — scroll page if needed (open or closed) */
+.timeline-body .sankey-container svg {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  max-height: none;
+}
+
+.timeline-body .node rect {
+  cursor: default;
+}
+
+@media only screen and (max-width: 900px) {
+  .pub-tab {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  .date-display {
+    font-size: 12px;
+    min-width: 90px;
+  }
+  .timeline-body .header.timeline-page-header {
+    line-height: 1.2;
+    padding: 0.15em 0 0.25em;
+  }
+
+  /* Full-screen controls: show either the pane or the page, not side-by-side */
+  .timeline-body {
+    margin: 12px;
+  }
+
+  .controls {
+    left: 0;
+    right: 0;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    box-sizing: border-box;
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
+  }
+
+  .timeline-body.controls-open .main-column {
+    padding-right: 0;
+  }
+
+  .timeline-body.controls-open #site-footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  /* Full-screen drawer above page content when open */
+  .timeline-body.controls-open .controls {
+    z-index: 300;
+  }
+
+  .timeline-topbar-actions {
+    padding-right: calc(10px + env(safe-area-inset-right, 0));
+  }
+}

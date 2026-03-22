@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+
+  <title>The Big Five US Trade Book Publishers — Timeline</title>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='css/style.css' rel='stylesheet' type='text/css'>
+  <link href='css/timeline.css' rel='stylesheet' type='text/css'>
+
+  <script src='https://d3js.org/d3.v7.min.js' charset='utf-8' type='text/javascript'></script>
+  <script src='js/sankey-v7.js' charset='utf-8' type='text/javascript'></script>
+</head>
+
+<body class='timeline-body'>
+  <div class='timeline-shell'>
+    <div class='main-column'>
+      <div class='timeline-topbar-actions'>
+        <a href='index.html' class='timeline-classic-link'>Switch to the classic version</a>
+        <button type='button' class='controls-expand-btn index-timeline-link' id='controls-expand-btn' title='Controls' aria-label='Controls' aria-expanded='false' aria-controls='controls-panel'>Controls</button>
+      </div>
+      <div class='header timeline-page-header' id='timeline-page-header'>
+        The Big Five US Trade Book Publishers
+      </div>
+      <div id='pub-tabs-main-slot' class='pub-tabs-main-slot'></div>
+      <div id='sankey-container' class='sankey-container'></div>
+    </div>
+
+    <aside class='controls controls--collapsed' id='timeline-controls' aria-label='Controls'>
+      <div class='controls-panel' id='controls-panel'>
+        <div class='controls-panel-header'>
+          <span class='controls-panel-title'>Controls</span>
+          <button type='button' class='controls-collapse-btn' id='controls-collapse-btn' title='Collapse' aria-label='Collapse controls'>&times;</button>
+        </div>
+        <div class='controls-inner'>
+          <div id='pub-tabs-panel-slot' class='pub-tabs-panel-slot'>
+            <div class='pub-tabs' id='pub-tabs'>
+              <button class='pub-tab active' data-pub='PRH'>Penguin Random House</button>
+              <button class='pub-tab' data-pub='HarperCollins'>HarperCollins</button>
+              <button class='pub-tab' data-pub='Macmillan'>Macmillan</button>
+              <button class='pub-tab' data-pub='SS'>Simon &amp; Schuster</button>
+              <button class='pub-tab' data-pub='Hachette'>Hachette</button>
+            </div>
+          </div>
+          <div class='slider-area'>
+            <button id='play-btn' class='play-btn' title='Play / Pause (Space)'>▶</button>
+            <span id='year-range-start' class='slider-year-label' aria-hidden='true'></span>
+            <div class='slider-wrap'>
+              <div id='change-bars' class='change-bars'></div>
+              <div class='custom-track' id='slider-track'>
+                <div class='custom-thumb' id='slider-thumb'></div>
+              </div>
+            </div>
+            <span id='year-range-end' class='slider-year-label' aria-hidden='true'></span>
+            <div class='date-display' id='current-date'></div>
+          </div>
+          <p class='controls-keyboard-hint'>Grab the pill and move it along the timeline. Alternatively, use your arrow keys to navigate it, and the space to play/pause.</p>
+          <div id='changes' class='changes'></div>
+          <section class='imprint-search-section' aria-labelledby='imprint-search-heading'>
+            <div class='imprint-search-heading' id='imprint-search-heading'>Search imprints</div>
+            <label for='imprint-search-input' class='imprint-search-label'>Search for an imprint across all publishers and across all time.</label>
+            <input type='search' id='imprint-search-input' class='imprint-search-input' placeholder='Start typing' autocomplete='off' spellcheck='false' />
+            <div id='imprint-search-results' class='imprint-search-results' role='region' aria-live='polite'></div>
+          </section>
+          <div class='controls-panel-slot' id='controls-panel-slot' aria-hidden='true'></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer id='site-footer'></footer>
+
+  <script src='js/load-footer.js'></script>
+  <script src='js/timeline.js'></script>
+</body>
+</html>
